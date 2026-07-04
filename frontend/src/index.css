@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #fae8f0;
+  --color-primary-100: #f4cce1;
+  --color-primary-200: #eabfcb;
+  --color-primary-300: #c191a1;
+  --color-primary-400: #a4508b;
+  --color-primary-500: #88498f;
+  --color-primary-600: #6c4b5e;
+  --color-primary-700: #5f0a87;
+  --color-primary-800: #564154;
+  --color-primary-900: #2f004f;
+}
+
+@layer base {
+  :root {
+    /* Very subtle light theme, inspired by professional SaaS */
+    --bg-main: #f9f9fb;
+    --bg-surface: #ffffff;
+    --bg-surface-hover: #f3f4f6;
+    --bg-surface-active: #e5e7eb;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --border-main: #e5e7eb;
+    --border-hover: #d1d5db;
+    --ring-main: var(--color-primary-400);
+    --shadow-subtle: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-elevated: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .dark {
+    /* Deep, rich dark theme (Notion/Linear style) */
+    --bg-main: #0a0a0a;
+    --bg-surface: #121212;
+    --bg-surface-hover: #1f1f1f;
+    --bg-surface-active: #292929;
+    --text-main: #ededed;
+    --text-muted: #888888;
+    --border-main: #272727;
+    --border-hover: #3a3a3a;
+    --ring-main: var(--color-primary-300);
+    --shadow-subtle: 0 1px 2px 0 rgb(0 0 0 / 1);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 1), 0 4px 6px -4px rgb(0 0 0 / 1);
+  }
+
+  /* Ultra-smooth, elegant theme transition */
+  body, div, nav, button, input, textarea, a, p, h1, h2, h3, h4, h5, h6, span, svg, form, label {
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Exclude transform and opacity from the global transition to prevent animation bugs */
+  .no-theme-transition {
+    transition: none !important;
+  }
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .bg-primary {
+    background-color: var(--color-primary-500);
+  }
+  .bg-primary-hover {
+    background-color: var(--color-primary-600);
+  }
+  .text-primary {
+    color: var(--color-primary-500);
+  }
+  .dark .bg-primary {
+    background-color: var(--color-primary-400);
+  }
+  .dark .bg-primary-hover {
+    background-color: var(--color-primary-500);
+  }
+  .dark .text-primary {
+    color: var(--color-primary-400);
+  }
+}
