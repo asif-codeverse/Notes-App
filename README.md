@@ -30,10 +30,7 @@ The Notes Application is a full-stack MERN (MongoDB, Express, React, Node.js) pr
 ## 🚀 Live Demo
 
 **Live Application:**  
-`<placeholder_for_live_url>`
-
-**API Base URL:**  
-`<placeholder_for_api_url>`
+`https://notes-app-cqk8.onrender.com/`
 
 ---
 
@@ -319,5 +316,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## ✍️ Author
 
 **Your Name / Organization**
-* GitHub: [@<placeholder>](https://github.com/placeholder)
-* LinkedIn: [Your Profile](https://linkedin.com/in/placeholder)
+* GitHub: [@<placeholder>](https://github.com/asif-codeverse)
+* LinkedIn: [Your Profile](https://www.linkedin.com/in/mohd-asif-011805tz/)
