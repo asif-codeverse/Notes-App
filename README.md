@@ -29,8 +29,8 @@ The Notes Application is a full-stack MERN (MongoDB, Express, React, Node.js) pr
 
 ## 🚀 Live Demo
 
-**Live Application:**  
-`https://notes-app-cqk8.onrender.com/`
+🌐 **Live Application:**  
+[Open Notes App](https://notes-app-cqk8.onrender.com)
 
 ---
 
@@ -43,8 +43,6 @@ The Notes Application is a full-stack MERN (MongoDB, Express, React, Node.js) pr
 | Create Note | Edit Note | Mobile View |
 | :---: | :---: | :---: |
 | ![Create](docs/images/create-note.png) | ![Edit](docs/images/edit-note.png) | ![Mobile](docs/images/mobile.png) |
-
-*(Note: Image paths are placeholders and will be updated shortly)*
 
 ---
 
@@ -316,5 +314,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## ✍️ Author
 
 **Your Name / Organization**
-* GitHub: [@<placeholder>](https://github.com/asif-codeverse)
-* LinkedIn: [Your Profile](https://www.linkedin.com/in/mohd-asif-011805tz/)
+* GitHub: [@asif-codeverse](https://github.com/asif-codeverse)
+* LinkedIn: [Mohd Asif](https://www.linkedin.com/in/mohd-asif-011805tz/)
