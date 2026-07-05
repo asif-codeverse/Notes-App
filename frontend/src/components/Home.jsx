@@ -140,15 +140,33 @@ const Home = () => {
               className="group bg-[var(--bg-surface)] border border-[var(--border-main)] rounded-lg p-5 flex flex-col h-full hover:border-[var(--border-hover)] hover:shadow-[var(--shadow-subtle)] transition-all cursor-default"
             >
               <div className="flex-1 mb-4">
-                <h3 className="text-base font-semibold text-[var(--text-main)] mb-2 line-clamp-2 leading-snug tracking-tight">
-                  {note.title}
-                </h3>
+                <div className="flex justify-between items-start gap-4 mb-2">
+                  <h3 className="text-base font-semibold text-[var(--text-main)] line-clamp-2 leading-snug tracking-tight">
+                    {note.title}
+                  </h3>
+                  <div className="flex space-x-0.5 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 focus-within:opacity-100 transition-opacity shrink-0">
+                    <button
+                      onClick={() => handleEdit(note)}
+                      className="p-1.5 text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-surface-hover)] rounded transition-colors focus:outline-none focus:opacity-100"
+                      aria-label="Edit Note"
+                    >
+                      <Edit3 size={14} />
+                    </button>
+                    <button
+                      onClick={() => handleDelete(note._id)}
+                      className="p-1.5 text-[var(--text-muted)] hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 dark:hover:text-red-400 rounded transition-colors focus:outline-none focus:opacity-100"
+                      aria-label="Delete Note"
+                    >
+                      <Trash2 size={14} />
+                    </button>
+                  </div>
+                </div>
                 <p className="text-[var(--text-muted)] text-sm leading-relaxed whitespace-pre-wrap break-words line-clamp-5">
                   {note.description}
                 </p>
               </div>
               
-              <div className="flex items-center justify-between pt-4 border-t border-[var(--border-main)]/50 mt-auto">
+              <div className="flex items-center pt-4 border-t border-[var(--border-main)]/50 mt-auto">
                 <div className="flex items-center gap-1.5 text-[11px] text-[var(--text-muted)] font-medium uppercase tracking-wider">
                   <Clock size={12} strokeWidth={2} />
                   <span>
@@ -157,22 +175,6 @@ const Home = () => {
                       day: 'numeric'
                     })}
                   </span>
-                </div>
-                <div className="flex space-x-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <button
-                    onClick={() => handleEdit(note)}
-                    className="p-1.5 text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-surface-hover)] rounded transition-colors focus:outline-none focus:opacity-100"
-                    aria-label="Edit Note"
-                  >
-                    <Edit3 size={14} />
-                  </button>
-                  <button
-                    onClick={() => handleDelete(note._id)}
-                    className="p-1.5 text-[var(--text-muted)] hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 dark:hover:text-red-400 rounded transition-colors focus:outline-none focus:opacity-100"
-                    aria-label="Delete Note"
-                  >
-                    <Trash2 size={14} />
-                  </button>
                 </div>
               </div>
             </div>
